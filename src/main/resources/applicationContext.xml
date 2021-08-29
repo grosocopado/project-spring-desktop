@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- CREANDO BEAN DE DISQUERADAO -->
+
+<!-- el id del bean se pone un nombre representativo -->
+<bean id="disqueraDAO" class="com.devpredator.projectspringdesktop.dao.impl.DisqueraDAOImpl">
+
+</bean>
+
+<bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+            <property name="locations">
+                <list>
+                    <value>classpath:config.properties</value>
+                </list>
+            </property>
+</bean>
+<!-- es para cargar propiedades en el application context -->
+
+<!-- lo que hace este bean es generar un objeto 
+a partir de una clase de la dependencia de Spring context,
+ el objeto properties viene siendo del tipo Properties Factory Bean  -->
+
+<!-- <bean id="..." class="...">-->
+<!--  </bean>-->
+
+
+</beans>
+
+<!-- fue copiado de lo que está en la configuracion de metadata docs.spring.io -->
